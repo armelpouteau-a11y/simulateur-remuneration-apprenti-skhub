@@ -309,7 +309,7 @@
   #printReport{
     display:none;
     width:794px;
-    padding:12mm 16mm 16mm;
+    padding:12mm 16mm 22mm;
     color:#20241F;
     font-family:'Inter',sans-serif;
     background:#ffffff;
@@ -347,43 +347,44 @@
   .pr-bar{
     background:#3DAB7D; color:#fff;
     font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px;
-    text-transform:uppercase; letter-spacing:.03em;
-    padding:7px 12px; margin:18px 0 12px;
+    text-transform:uppercase; letter-spacing:.03em; white-space:nowrap;
+    padding:7px 12px; margin:24px 0 16px;
   }
 
   .pr-info{
-    width:100%; border-collapse:collapse; margin-bottom:6px;
+    width:100%; border-collapse:collapse; margin-bottom:4px;
     font-size:12.5px;
   }
   .pr-info td{ padding:4px 0; vertical-align:top; }
-  .pr-info td.k{ font-weight:700; width:230px; }
+  .pr-info td.k{ font-weight:700; width:230px; white-space:nowrap; }
+  .pr-info td:not(.k){ white-space:nowrap; }
 
   /* ---- Rémunération : % SMIC et salaire mis en avant, dates discrètes ---- */
-  .pr-annee-titre{ font-style:italic; font-weight:700; font-size:12.5px; margin:12px 0 6px; color:#1D3D1F; }
+  .pr-annee-titre{ font-style:italic; font-weight:700; font-size:12.5px; margin:14px 0 10px; color:#1D3D1F; white-space:nowrap; }
   .pr-palier{
     display:flex; align-items:center; gap:14px;
-    padding:9px 10px; margin-bottom:6px;
+    padding:9px 10px; margin-bottom:8px;
     background:#FAF9F4; border:1px solid #E4E1D6; border-radius:8px;
   }
   .pr-palier-dates{
-    font-size:10px; color:#9A9587; line-height:1.4; flex:0 0 auto; width:118px;
+    font-size:10px; color:#9A9587; line-height:1.4; flex:0 0 auto; width:118px; white-space:nowrap;
   }
   .pr-palier-main{ display:flex; align-items:baseline; gap:16px; flex:1; }
   .pr-palier-pct{
     font-family:'JetBrains Mono',monospace; font-weight:700; font-size:18px;
-    color:#1D3D1F; background:#DCF0E7; padding:2px 9px; border-radius:5px; flex:0 0 auto;
+    color:#1D3D1F; background:#DCF0E7; padding:2px 9px; border-radius:5px; flex:0 0 auto; white-space:nowrap;
   }
   .pr-palier-salaire{
-    font-family:'JetBrains Mono',monospace; font-weight:700; font-size:16px; color:#1D3D1F;
+    font-family:'JetBrains Mono',monospace; font-weight:700; font-size:16px; color:#1D3D1F; white-space:nowrap;
   }
   .pr-palier-salaire small{ font-family:'Inter',sans-serif; font-weight:500; font-size:10.5px; color:#5B6158; }
   .pr-palier-total{
-    margin-left:auto; text-align:right; font-size:10.5px; color:#9A9587; flex:0 0 auto;
+    margin-left:auto; text-align:right; font-size:10.5px; color:#9A9587; flex:0 0 auto; white-space:nowrap;
   }
   .pr-palier-total b{ font-family:'JetBrains Mono',monospace; color:#5B6158; font-weight:600; }
 
   /* ---- Coût entreprise : le coût mensuel est LA donnée qui doit sauter aux yeux ---- */
-  .pr-hero-stats{ display:flex; gap:12px; margin-bottom:14px; }
+  .pr-hero-stats{ display:flex; gap:12px; margin-bottom:16px; }
   .pr-hero-stat{
     flex:1; background:#1D3D1F; border-radius:10px; padding:14px 16px;
   }
@@ -395,28 +396,36 @@
     letter-spacing:.03em; color:#B9C7B8; margin-bottom:5px; font-weight:700;
   }
   .pr-hero-value{
-    font-family:'JetBrains Mono',monospace; font-size:25px; font-weight:700; color:#fff;
+    font-family:'JetBrains Mono',monospace; font-size:25px; font-weight:700; color:#fff; white-space:nowrap;
   }
   .pr-hero-value-xl{ font-size:38px; }
   .pr-hero-sub{ font-size:9.5px; color:#8AA089; margin-top:2px; }
-  .pr-hero-stat-full .pr-hero-sub{ font-size:11px; margin-top:6px; }
+  .pr-hero-stat-full .pr-hero-sub{
+    font-size:11px; font-weight:600; color:#DCF0E7; margin-top:12px; white-space:nowrap;
+  }
 
   .pr-cout-row{
     display:flex; justify-content:space-between; align-items:center;
-    padding:6px 2px; font-size:11.5px; color:#5B6158;
+    padding:7px 10px; font-size:11.5px; color:#5B6158;
   }
-  .pr-cout-row .lbl{ font-weight:500; }
-  .pr-cout-row .val{ font-family:'JetBrains Mono',monospace; font-size:12px; color:#20241F; font-weight:600; }
+  .pr-cout-row .lbl{ font-weight:500; white-space:nowrap; padding-right:16px; }
+  .pr-cout-row .val{
+    font-family:'JetBrains Mono',monospace; font-size:12px; color:#20241F; font-weight:600;
+    white-space:nowrap; flex:0 0 auto;
+  }
   .pr-note{ font-size:10px; color:#9A9587; margin:2px 0 4px; }
 
   .pr-disclaimer{
-    margin-top:20px; font-size:9px; color:#9A9587; line-height:1.6;
-    padding:9px 11px; background:#FAF9F4; border-radius:6px; border:1px solid #E4E1D6;
+    margin-top:26px; font-size:9px; color:#9A9587; line-height:1.75;
+    padding:11px 13px; background:#FAF9F4; border-radius:6px; border:1px solid #E4E1D6;
   }
   .pr-footer{
-    margin-top:16px; padding-top:9px; border-top:1px solid #E4E1D6;
-    font-size:9.5px; color:#9A9587; display:flex; justify-content:space-between;
+    margin-top:22px; padding-top:9px; border-top:1px solid #E4E1D6;
+    font-size:9.5px; color:#9A9587; display:flex; justify-content:space-between; gap:16px;
   }
+  .pr-footer span{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .pr-footer span:first-child{ flex:1 1 auto; min-width:0; }
+  .pr-footer span:last-child{ flex:0 0 auto; }
 </style>
 </head>
 
@@ -923,7 +932,7 @@ function buildPrintReport(){
   $('pFin').textContent = fmtDate(r.fin);
 
   $('pLissage').textContent = fmtEuro(r.lissage);
-  $('pCoutReelSub').textContent = `Coût réel de l'entreprise : ${fmtEuro(r.coutReel)} sur la durée totale du contrat`;
+  $('pCoutReelSub').textContent = `Coût réel : ${fmtEuro(r.coutReel)} sur la durée du contrat`;
   $('pBrut').textContent = fmtEuro(r.brut);
   $('pAide').textContent = fmtEuro(r.aide);
   $('pAideNote').textContent = CONFIG.aideEmployeur.note;
@@ -987,12 +996,26 @@ function generatePdfVector(){
   let y = 12;
 
   function checkBreak(h){
-    if(y + h > pageH - 14){ pdf.addPage(); y = 16; }
+    if(y + h > pageH - 16){ pdf.addPage(); y = 16; }
   }
   function col(c){ return c; }
   function setColor(c){ pdf.setTextColor(c[0], c[1], c[2]); }
   function setFill(c){ pdf.setFillColor(c[0], c[1], c[2]); }
   function setDraw(c){ pdf.setDrawColor(c[0], c[1], c[2]); }
+
+  // Réduit progressivement la taille de police jusqu'à ce que le texte tienne
+  // sur une seule ligne dans maxWidth, plutôt que de le laisser déborder ou
+  // revenir à la ligne (nom candidat / formation / recruteur en longueur libre).
+  function fitText(text, x, y, maxWidth, opts){
+    opts = opts || {};
+    const minSize = opts.minSize || 6.5;
+    let size = pdf.getFontSize();
+    while(pdf.getTextWidth(text) > maxWidth && size > minSize){
+      size -= 0.5;
+      pdf.setFontSize(size);
+    }
+    pdf.text(text, x, y, opts.align ? { align: opts.align } : undefined);
+  }
 
   // Logo (asset compressé dédié au PDF, ~8 Ko)
   const logoW = 42, logoH = logoW * LOGO_PDF_RATIO;
@@ -1012,19 +1035,21 @@ function generatePdfVector(){
   y += 6;
 
   function sectionBar(title){
+    y += 4;
     checkBreak(9);
     setFill(PDF_COLORS.mint);
     pdf.roundedRect(marginX, y, contentW, 7, 0.5, 0.5, 'F');
     pdf.setFont('helvetica', 'bold'); pdf.setFontSize(9.5); setColor(PDF_COLORS.white);
-    pdf.text(title.toUpperCase(), marginX + 3, y + 4.8);
-    y += 7 + 5;
+    pdf.text(title.toUpperCase(), marginX + 4, y + 4.8);
+    y += 7 + 6;
   }
   function infoRow(label, value){
     checkBreak(6);
     pdf.setFont('helvetica', 'bold'); pdf.setFontSize(9.5); setColor(PDF_COLORS.ink);
     pdf.text(label, marginX, y);
-    pdf.setFont('helvetica', 'normal');
-    pdf.text(String(value), marginX + 62, y);
+    pdf.setFont('helvetica', 'normal'); pdf.setFontSize(9.5);
+    const valueX = marginX + 62;
+    fitText(String(value), valueX, y, marginX + contentW - valueX);
     y += 6;
   }
 
@@ -1038,7 +1063,6 @@ function generatePdfVector(){
   y += 2;
   infoRow('Date de début du contrat :', fmtDate(r.debut));
   infoRow('Date de fin du contrat :', fmtDate(r.fin));
-  y += 3;
 
   sectionBar('Rémunération du candidat');
   let currentAnnee = 0;
@@ -1048,7 +1072,7 @@ function generatePdfVector(){
       checkBreak(7);
       pdf.setFont('helvetica', 'bolditalic'); pdf.setFontSize(9.5); setColor(PDF_COLORS.forest);
       pdf.text(ANNEE_LABELS[p.annee-1] + ' :', marginX, y);
-      y += 6;
+      y += 7.5;
     }
     const cardH = 15;
     checkBreak(cardH + 2);
@@ -1079,22 +1103,21 @@ function generatePdfVector(){
     pdf.setFont('helvetica', 'bold'); pdf.setFontSize(9); setColor(PDF_COLORS.inkSoft);
     pdf.text(fmtEuroPdf(p.total), marginX + contentW - 4, y + 11, { align: 'right' });
 
-    y += cardH + 3;
+    y += cardH + 4;
   });
-  y += 2;
 
   sectionBar("Coût pour l'entreprise");
 
-  const heroH = 22;
+  const heroH = 27;
   checkBreak(heroH + 3);
   setFill(PDF_COLORS.forest);
   pdf.roundedRect(marginX, y, contentW, heroH, 2, 2, 'F');
   pdf.setFont('helvetica', 'bold'); pdf.setFontSize(9); setColor(PDF_COLORS.heroSub1);
   pdf.text('COÛT MENSUEL', marginX + 6, y + 7);
   pdf.setFont('helvetica', 'bold'); pdf.setFontSize(24); setColor(PDF_COLORS.white);
-  pdf.text(fmtEuroPdf(r.lissage), marginX + 6, y + 15.5);
-  pdf.setFont('helvetica', 'normal'); pdf.setFontSize(8.5); setColor(PDF_COLORS.heroSub2);
-  pdf.text(`Coût réel de l'entreprise : ${fmtEuroPdf(r.coutReel)} sur la durée totale du contrat`, marginX + 6, y + 19.5);
+  pdf.text(fmtEuroPdf(r.lissage), marginX + 6, y + 17);
+  pdf.setFont('helvetica', 'bold'); pdf.setFontSize(9); setColor(PDF_COLORS.heroSub1);
+  pdf.text(`Coût réel : ${fmtEuroPdf(r.coutReel)} sur la durée du contrat`, marginX + 6, y + 23.5);
   y += heroH + 6;
 
   function coutRow(label, value){
@@ -1102,34 +1125,38 @@ function generatePdfVector(){
     pdf.setFont('helvetica', 'normal'); pdf.setFontSize(9); setColor(PDF_COLORS.inkSoft);
     pdf.text(label, marginX, y);
     pdf.setFont('helvetica', 'bold'); setColor(PDF_COLORS.ink);
-    pdf.text(value, marginX + contentW, y, { align: 'right' });
+    pdf.text(value, marginX + contentW - 4, y, { align: 'right' });
     y += 6;
   }
   coutRow('Rémunération brute totale sur la durée du contrat', fmtEuroPdf(r.brut));
   coutRow("Aide à l'embauche d'un apprenti*", fmtEuroPdf(r.aide));
 
+  const legalLineH = 3.7; // interligne confortable (fontSize 7 x lineHeightFactor 1.5)
+
   pdf.setFont('helvetica', 'italic'); pdf.setFontSize(7); setColor(PDF_COLORS.muted);
   const noteLines = pdf.splitTextToSize('* ' + CONFIG.aideEmployeur.note, contentW);
-  checkBreak(noteLines.length * 3.2 + 2);
-  pdf.text(noteLines, marginX, y);
-  y += noteLines.length * 3.2 + 4;
+  checkBreak(noteLines.length * legalLineH + 2);
+  pdf.text(noteLines, marginX, y, { lineHeightFactor: 1.5 });
+  y += noteLines.length * legalLineH + 6;
 
   pdf.setFont('helvetica', 'normal'); pdf.setFontSize(7);
-  const discLines = pdf.splitTextToSize(CONFIG.disclaimer, contentW - 6);
-  const discH = discLines.length * 3.2 + 6;
+  const discLines = pdf.splitTextToSize(CONFIG.disclaimer, contentW - 8);
+  const discH = discLines.length * legalLineH + 7;
   checkBreak(discH + 2);
   setFill(PDF_COLORS.paper); setDraw(PDF_COLORS.line);
   pdf.roundedRect(marginX, y, contentW, discH, 1.5, 1.5, 'FD');
   setColor(PDF_COLORS.muted);
-  pdf.text(discLines, marginX + 3, y + 4);
-  y += discH + 5;
+  pdf.text(discLines, marginX + 4, y + 4.5, { lineHeightFactor: 1.5 });
+  y += discH + 6;
 
-  checkBreak(6);
+  checkBreak(16);
   setDraw(PDF_COLORS.line);
   pdf.line(marginX, y, marginX + contentW, y);
-  y += 4;
+  y += 6;
   pdf.setFont('helvetica', 'normal'); pdf.setFontSize(7.5); setColor(PDF_COLORS.muted);
-  pdf.text(getContactValue(), marginX, y);
+  const siteW = pdf.getTextWidth(CONFIG.ecole.siteWeb);
+  fitText(getContactValue(), marginX, y, contentW - siteW - 8);
+  pdf.setFont('helvetica', 'normal'); pdf.setFontSize(7.5); setColor(PDF_COLORS.muted);
   pdf.text(CONFIG.ecole.siteWeb, marginX + contentW, y, { align: 'right' });
 
   const safeName = ($('nom').value || 'apprenti').trim().replace(/[^a-zA-Z0-9À-ÿ_\- ]/g,'').replace(/\s+/g,'_');

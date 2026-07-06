@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--
+  Simulateur de rémunération apprenti — SKHUB
+  Auteur principal / développeur de l'outil : Armel Pouteau
+-->
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -988,7 +992,7 @@ function generatePdfVector(){
 
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF({ unit: 'mm', format: 'a4', compress: true });
-  pdf.setProperties({ title: 'Simulation coût apprenti - SKHUB', subject: '', author: '', keywords: '', creator: '' });
+  pdf.setProperties({ title: 'Simulation coût apprenti - SKHUB', subject: '', author: 'Armel Pouteau', keywords: '', creator: 'Armel Pouteau' });
 
   const pageW = 210, pageH = 297;
   const marginX = 16;
